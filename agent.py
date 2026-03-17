@@ -8,8 +8,8 @@ import google.generativeai as genai
 load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")  # Reads from your .env file
 if not api_key:
-    st.error("GEMINI_API_KEY not found in .env. Please add it.")
-    st.stop()
+     st.error("GEMINI_API_KEY not set. Add it in Secrets or .env")
+     st.stop()
 
 genai.configure(api_key=api_key)
 
